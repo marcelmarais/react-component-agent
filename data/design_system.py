@@ -1,27 +1,75 @@
 
 DESIGN_SYSTEM = '''
+# Typography
 
-I would like you to help me create a design system using Tailwind CSS classes. This design system will be used throughout my React App components. The deliverable should be a text file containing all the relevant classes, organized per component. Please adhere to the following guidelines:
+Headings:
 
-Input Parameters:
+H1: text-4xl font-extrabold tracking-tight lg:text-5xl
+H2: mt-10 text-3xl font-semibold tracking-tight transition-colors first:mt-0
+H3: mt-8 text-2xl font-semibold tracking-tight
 
-Deliverables:
-Please output a text file with the following sections:
+Paragraphs:
 
-Typography: List Tailwind CSS classes for headings (H1, H2, H3), paragraphs, and links.
+leading-7 [:not(:first-child)]:mt-6
 
-Color Scheme: Based on the accent color ({accent_colour}), list Tailwind CSS classes for background, text, and border colors.
+Links:
 
-Buttons: List Tailwind CSS classes for primary and secondary buttons.
+font-medium text-primary underline underline-offset-4
 
-Forms: List Tailwind CSS classes for form elements like input fields, checkboxes, and radio buttons.
+Blockquote: 
 
-Spacing and Layout: List classes for padding, margin, and layout components like flexbox or grid.
+mt-6 border-l-2 pl-6 italic
 
-Additional Components: List any other Tailwind CSS classes for components you think would fit well with the aesthetic: {aesthetic}.
+Lists:
 
-Constraints:
-Please only use Tailwind CSS classes available in the latest version.
-Ensure the classes are compatible with React.
-Compile all of this into a text file for easy reference and make sure to separate each section with appropriate headers.
+my-6 ml-6 list-disc [:>li]:mt-2
+
+Table:
+
+Header: border px-4 py-2 text-left font-bold [:align=center]:text-center [:align=right]:text-right
+Body: border px-4 py-2 text-left [:align=center]:text-center [:align=right]:text-right
+
+# Buttons
+Primary Button
+bg-blue-500 text-white py-2 px-4 rounded
+Secondary Button
+bg-gray-200 text-gray-700 py-2 px-4 rounded
+
+# Forms
+Input Fields
+border p-2 rounded
+
+Checkboxes
+form-checkbox text-teal-600
+
+# Radio Buttons
+form-radio text-teal-600
+
+# Input Fields
+
+# border p-2 rounded
+Checkboxes
+form-checkbox text-{accent_colour}-600
+Radio Buttons
+form-radio text-{accent_colour}-600
+
+Spacing and Layout:
+Padding: p-4
+Margin: m-4
+Flexbox: 
+flex
+flex-col
+items-center
+
+Grid:
+grid
+grid-cols-3
+
+# Additional Components
+
+Cards: p-4 border rounded shadow-md
+Tooltips: bg-gray-200 text-sm rounded p-1
+Alerts: text-white bg-red-500 p-2 rounded
+
+
 '''
